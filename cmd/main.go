@@ -1,7 +1,10 @@
+package main
+
 import (
-	"fmt"
+	"github.com/gfkoeb/snake_case_ify/pkg/convert"
 )
 
-fn main() {
-    fmt.Println("Hello, World!")
+func main() {
+	var s string = "HelloWorld"
+	convert.Convert(s)
 }
