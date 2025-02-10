@@ -2,34 +2,49 @@ package convert
 
 import "testing"
 
-var snake string = "hello_world"
+var (
+	snakeNoSpace string = "hello_world()"
+	snakeSpace   string = "hello_world ()"
+)
 
 func TestConvertCamel(t *testing.T) {
 	// test convert
 
-	camelCase := "helloWorld"
+	camelNoSpace := "helloWorld()"
+	camelSpace := "helloWorld ()"
 
-	if snake != Convert(camelCase) {
-		t.Errorf("Expected %s, got %s", snake, Convert(camelCase))
+	if snakeNoSpace != Convert(camelNoSpace) {
+		t.Errorf("Expected %s, got %s", snakeNoSpace, Convert(camelNoSpace))
+	}
+	if snakeSpace != Convert(camelSpace) {
+		t.Errorf("Expected %s, got %s", snakeSpace, Convert(camelSpace))
 	}
 }
 
 func TestConvertPascal(t *testing.T) {
 	// test convert
 
-	pascalCase := "HelloWorld"
+	pascalNoSpace := "HelloWorld()"
+	pascalSpace := "HelloWorld ()"
 
-	if snake != Convert(pascalCase) {
-		t.Errorf("Expected %s, got %s", snake, Convert(pascalCase))
+	if snakeNoSpace != Convert(pascalNoSpace) {
+		t.Errorf("Expected %s, got %s", snakeNoSpace, Convert(pascalNoSpace))
+	}
+	if snakeSpace != Convert(pascalSpace) {
+		t.Errorf("Expected %s, got %s", snakeSpace, Convert(pascalSpace))
 	}
 }
 
 func TestConvertKebab(t *testing.T) {
 	// test convert
 
-	kebabCase := "hello-world"
+	kebabNoSpace := "hello-world()"
+	kebabSpace := "hello-world ()"
 
-	if snake != Convert(kebabCase) {
-		t.Errorf("Expected %s, got %s", snake, Convert(kebabCase))
+	if snakeNoSpace != Convert(kebabNoSpace) {
+		t.Errorf("Expected %s, got %s", snakeNoSpace, Convert(kebabNoSpace))
+	}
+	if snakeSpace != Convert(kebabSpace) {
+		t.Errorf("Expected %s, got %s", snakeSpace, Convert(kebabSpace))
 	}
 }
